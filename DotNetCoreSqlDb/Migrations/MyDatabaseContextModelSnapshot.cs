@@ -39,6 +39,9 @@ namespace DotNetCoreSqlDb.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Todo");
+
+                    b.Property<string>("AssignedTo")
+                        .HasColumnType("nvarchar(max)");
                 });
 #pragma warning restore 612, 618
         }
